@@ -24,6 +24,39 @@ Execute the programs and publish them.
 
 # CODE
 ```
+urls.py:
+from django.contrib import admin
+from django.urls import path
+from mapapp import views
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.p1),
+    path('new/',views.p2,name='manali'),
+    path('file/',views.p3,name='park'),
+    path('new1/',views.p4,name='oil'),
+    path('file1/',views.p5,name='petrol'),
+    path('new2/',views.p6,name='lake'),
+    ]
+
+viwes.py:
+
+from django.shortcuts import render
+from django.http import HttpResponse
+def p1(request):
+    return render (request,'map.html')
+def p2(request):
+    return render(request,'webpage5.html')
+def p3(request):
+     return render(request,'webpage1.html')
+def p4(request):
+     return render(request,'webpage2.html')
+def p5(request):
+     return render(request,'webpage3.html')
+def p6(request):
+     return render(request,'webpage4.html')
+
 map.html : 
 
 <!DOCTYPE html>
@@ -151,10 +184,159 @@ webpage2.html:
 </html>
   
 webpage3.html:
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:darkmagenta;
+    }
+    .Title{
+        font-family:fantasy;
+        align-items: center;
+        letter-spacing: 0.2cm;
+    }
+    .content{
+        width: 100%;
+        line-height: 1cm;
+        font-size: larger;
+        font-family:serif;
+        color:rgb(45, 228, 238);
+        text-shadow: 1px 1px 0px black;
+        text-indent: 2cm;
+        
+    }
+    .picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        height: 35%;
+       
+    }
+</style>
+<body>
+     <h1  align="center" class="Title">MANALI PETROCHEMICALS LTD PLANT-1</h1>
+        {% load static %}
+        <img src="{% static 'petrol1.png' %}"alt="image"  class="picture">
+         <p class="content">
+            Manali Petrochemicals Ltd (MPL), established in 1986 and located in the Manali Industrial Area of Chennai, operates Plant-I as one of its key production units.
+            The plant mainly manufactures propylene oxide and its derivatives such as polyols and propylene glycol. These products are widely used in industries for making polyurethane foams, adhesives, coatings, paints, pharmaceuticals, cosmetics, food products, and insulation materials. 
+            By supplying these vital petrochemicals, Plant-I supports major sectors like automotive, construction, furnishing, textiles, and healthcare, making it an important contributor to India’s chemical and industrial growth.</p>
+</body>
+</html>
+  
+webpage4.html:
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        background-color: crimson;
+    }
+    .Title{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-items: center;
+        letter-spacing: 0.2cm;
+        text-shadow: 1px 1px 4px white;
+    }
+    .content{
+        width: 100%;
+        line-height: 1cm;
+        font-size: x-large;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:antiquewhite;
+        text-indent: 2cm;
+        
+    }
+    .picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        height: 35%;
+       
+    }
+</style>
+<body>
+<h1 align="center" class="Title">PERIYATHOPPU LAKE AND VIEW </h1>
+        {% load static %}
+        <img src="{% static 'lake.jpg' %}"alt=" image" class="picture">
+       <p class="content">
+            Periya Thoppu Lake, spread over about 139 acres across the Manali and Madhavaram regions of North Chennai, was once an important waterbody supporting drinking water needs, fishing, and local biodiversity. 
+            Over the years, however, it has suffered from severe neglect, with water hyacinth infestation, sewage inflow, and urban encroachments reducing its capacity and ecological health.
+             The construction of a road has further split the lake into parts, weakening its flood-holding function. During Cyclone Michaung, this loss of capacity caused heavy flooding in surrounding neighborhoods. Recognizing its importance, the Greater Chennai Corporation and other agencies have proposed restoration projects, including deepening the lake, intercepting sewage, and improving storm-water management, aiming to revive it as a vital ecological and flood-mitigation resource for the city.</p>
+</body>
+</html>
+        
+webpage5.html:
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>    <style>
+    body{
+        background-color: rgb(200, 97, 118);
+    }
+    .Title{
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bolder; 
+        align-items: center;
+        letter-spacing: 0.2cm;
+        text-shadow: 2px 2px 2px white;
+    }
+    .content{
+        width: 100%;
+        line-height: 1cm;
+        font-size: x-large;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:rgb(75, 230, 251);
+        text-indent: 2cm;
+        
+    }
+    .picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        height: 35%;
+       
+    }
+</style>
+<body>
+    <h1 align="center" class="Title">MANALI, CHENNAI</h1>
+        {% load static %}
+        <img src="{% static 'manali.jpg' %}"alt=" image"  class="picture">
+        
+
+       <p class="content">
+            Manali is a northern suburb and industrial township of Chennai, Tamil Nadu, located along the banks of the Kosasthalaiyar River. It is well known as an industrial hub, housing major facilities such as Manali Petrochemicals Ltd, Chennai Petroleum Corporation Ltd (CPCL), and several small and medium chemical industries. The area also has residential neighborhoods, markets, schools, and religious places, making it both an industrial and urban zone. Due to its concentration of industries, Manali plays an important role in Chennai’s economy, but it also faces challenges such as air and water pollution, traffic congestion, and flooding during heavy rains. In recent years, efforts have been taken to improve infrastructure, restore local lakes, and balance industrial growth with environmental and community well-being.</p>
+    
+</body>
+</html>
 
 ```
 # OUTPUT
+![alt text](<Screenshot 2025-09-30 192943.png>)
+![alt text](<Screenshot 2025-09-30 192957.png>)
+![alt text](<Screenshot 2025-09-30 193032.png>)
+![alt text](<Screenshot 2025-09-30 193220.png>)
+![alt text](<Screenshot 2025-09-30 193242.png>)
+
+
 # RESULT
 The program for implementing image maps using HTML is executed successfully.
