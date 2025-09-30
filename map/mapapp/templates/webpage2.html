@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #7bfbfd;
+    }
+    .Title{
+        font-family:Arial, Helvetica, sans-serif;
+        align-items: center;
+        letter-spacing: 0.1cm;
+    }
+    .content{
+        width: 100%;
+        line-height: 1cm;
+        font-size: x-large;
+        font-weight:600;
+        font-family:serif;
+        color:rgba(58, 45, 114, 0.788);
+        text-shadow: 1px 1px 0px whitesmoke;
+        text-indent: 2cm;
+        
+    }
+    .picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        height: 35%;
+       
+    }
+</style>
+<body>
+        <h1  align="center" class="Title">INDIAN OIL CORPORATION LIMITED Integrated Lube Complex Chennai,Manali</h1>
+        {% load static %}
+        <img src="{% static 'oil.jpg' %}" alt="image"  class="picture">
+        
+
+       <p class="content">
+            Indian Oil Corporation Limited’s Integrated Lube Complex in Manali, Chennai, is one of India’s largest and most advanced lubricant production facilities.
+            It manufactures a wide range of automotive and industrial lubricants, including greases, base oils, and specialty products, catering to both domestic and international markets.
+            The complex is equipped with modern blending, filling, packaging, and quality control systems to ensure high standards. It operates under strict safety and environmental regulations, emphasizing sustainable industrial practices.
+            The facility employs skilled professionals across production, engineering, and quality management. Strategically located in North Chennai, it benefits from excellent road and rail connectivity for raw material supply and product distribution.</p>
+</body>
+</html>
+  

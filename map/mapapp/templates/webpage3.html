@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:darkmagenta;
+    }
+    .Title{
+        font-family:fantasy;
+        align-items: center;
+        letter-spacing: 0.2cm;
+    }
+    .content{
+        width: 100%;
+        line-height: 1cm;
+        font-size: larger;
+        font-family:serif;
+        color:rgb(45, 228, 238);
+        text-shadow: 1px 1px 0px black;
+        text-indent: 2cm;
+        
+    }
+    .picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        height: 35%;
+       
+    }
+</style>
+<body>
+     <h1  align="center" class="Title">MANALI PETROCHEMICALS LTD PLANT-1</h1>
+        {% load static %}
+        <img src="{% static 'petrol1.png' %}"alt="image"  class="picture">
+         <p class="content">
+            Manali Petrochemicals Ltd (MPL), established in 1986 and located in the Manali Industrial Area of Chennai, operates Plant-I as one of its key production units.
+            The plant mainly manufactures propylene oxide and its derivatives such as polyols and propylene glycol. 
+            These products are widely used in industries for making polyurethane foams, adhesives, coatings, paints, pharmaceuticals, cosmetics, food products, and insulation materials. 
+            By supplying these vital petrochemicals, Plant-I supports major sectors like automotive, construction, furnishing, textiles, and healthcare, making it an important contributor to India’s chemical and industrial growth.</p>
+</body>
+</html>

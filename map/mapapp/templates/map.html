@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+        {% load static %} 
+        <img src="{% static 'map.png' %}" usemap="#mymap" height="50%" width="100%" >
+        <map name="mymap">
+        <area shape="rect" coords="838,347,1207,250" href="{% url 'manali' %}" title=" MANALI CLICK HERE" >
+        <area shape="rect" coords="170,750,2,450" href="{% url 'park' %}" title="PARK CLICK HERE">
+        <area shape="circle" coords="552,0,200" href="{% url 'oil' %}" title="INDIAN OIL CLICK HERE">
+        <area shape="rect" coords="1393,573,1023,436" href="{% url 'petrol' %}" title="PLANT-1 CLICK HERE">
+        <area shape="rect" coords="443,800,200,400" href="{% url 'lake' %}" title="LAKE CLICK HERE">
+</body>
+</html>
