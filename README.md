@@ -1,5 +1,5 @@
 # Ex04 Places Around Me
-# Date:
+# Date:30.09.2025
 # AIM
 To develop a website to display details about the places around my house.
 
@@ -336,7 +336,7 @@ webpage5.html:
 ![alt text](<Screenshot 2025-09-30 193032.png>)
 ![alt text](<Screenshot 2025-09-30 193220.png>)
 ![alt text](<Screenshot 2025-09-30 193242.png>)
-
+![alt text](<Screenshot 2025-09-30 195835.png>)
 
 # RESULT
 The program for implementing image maps using HTML is executed successfully.
